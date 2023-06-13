@@ -7,9 +7,7 @@ export const useGithubUserStore = create (set=>({
     getUser: async (username) => {
         set({loading:true})
         const res = await axios.get(`https://api.github.com/users/${username}`, {
-            headers:{
                 Authorization:`Bearer ${process.env.REACT_APP_GITHUB_TOKEN}`
-            }
         })
         set({
             loading:false,

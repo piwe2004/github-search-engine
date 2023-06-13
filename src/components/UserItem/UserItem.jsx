@@ -5,9 +5,7 @@ import { useSearchParams, Link } from 'react-router-dom';
 
 function UserItem({user:{login, avatar_url}}) {
 
-    console.log(login)
-
-    const [searchParams, setSearchParams] = useSearchParams({})
+    const [searchParams] = useSearchParams({})
 
     return (
         <Card outlined='outlined'>
@@ -21,7 +19,7 @@ function UserItem({user:{login, avatar_url}}) {
                     component={Link} 
                     endIcon={<InfoIcon />} 
                     to={`/user/${login}`} 
-                    state={{previous:searchParams.get('page'), q:searchParams.get('q')}}
+                    state={{previous:searchParams.get('page'), q:searchParams.get('q'), }}
                     sx={{margin:'auto'}}
                 >
                     INFO

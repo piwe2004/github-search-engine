@@ -1,11 +1,12 @@
 import React from 'react'
-import SearchInput from '../../components/SearchInput/SearchInput'
-import UserGrid from '../../components/UserGrid/UserGrid'
+import UserInfo from '../../components/UserInfo/UserInfo'
+import RepoList from '../../components/RepoList/RepoList'
 
 function User() {
     return (
         <>
-            User
+            <UserInfo />
+            <RepoList />
         </>
     )
 }
